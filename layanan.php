@@ -189,12 +189,10 @@
             <div class="flex justify-center">
                 <div class="relative">
                     <!-- Tombol -->
-                    <button id="toggleButton" class="text px-4 py-2 bg-slate-200 rounded hover:bg-slate-300">
+                    <button id="toggleButton"
+                        class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">
                         Lainnya
                     </button>
-                    <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-500">
-                        ▼
-                    </div>
                 </div>
             </div>
 
