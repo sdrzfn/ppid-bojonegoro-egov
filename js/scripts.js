@@ -79,3 +79,10 @@ document.getElementById('formSelector').addEventListener('change', (e) => {
     document.getElementById('formPermohonan').classList.toggle('hidden', v !== 'permohonan');
     document.getElementById('formKeberatan').classList.toggle('hidden', v !== 'keberatan');
 });
+
+const toggleBtn = document.getElementById("toggleButton");
+const moreContent = document.getElementById("moreContent");
+
+toggleBtn.addEventListener("click", () => {
+    moreContent.classList.toggle("hidden");
+});
