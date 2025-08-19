@@ -5,7 +5,7 @@
 <footer id="informasi" class="bg-slate-900 text-slate-200">
     <div class="container-wide mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
         <div class="col-span-1 flex items-start gap-4">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/120px-Lambang_Kabupaten_Bondowoso.png"
+            <img src="assets/img/bondowoso.png"
                 class="w-14 h-14" alt="Logo" />
             <div>
                 <div class="text-4xl font-extrabold tracking-tight text-sky-400">PPID</div>
