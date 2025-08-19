@@ -110,26 +110,14 @@
 <body class="bg-white text-slate-800">
     <!-- Top Bar -->
     <header class="w-full border-b border-slate-200 bg-rose-100/70">
-        <div class="container-wide mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <a href="index.php">
-                    <img src="" alt="Lambang Bondowoso" class="w-10 h-10 object-contain" />
-                </a>
-                <span class="text-2xl font-extrabold tracking-wide text-sky-700">PPID</span>
-            </div>
-            <nav class="hidden md:flex items-center gap-10 font-medium">
-                <a href="profil.php" class="hover:text-sky-700">Profil</a>
-                <a href="layanan.php" class="hover:text-sky-700">Layanan</a>
-                <a href="informasi.php" class="hover:text-sky-700">Informasi</a>
-            </nav>
-            <button id="navToggle"
-                class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/50">
-                <span class="sr-only">Menu</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                    <path d="M3.75 5.25h16.5v1.5H3.75zM3.75 11.25h16.5v1.5H3.75zM3.75 17.25h16.5v1.5H3.75z" />
-                </svg>
-            </button>
-        </div>
+        <?php include('navbar.php'); ?>
+        <button id="navToggle"
+            class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/50">
+            <span class="sr-only">Menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M3.75 5.25h16.5v1.5H3.75zM3.75 11.25h16.5v1.5H3.75zM3.75 17.25h16.5v1.5H3.75z" />
+            </svg>
+        </button>
         <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
             <div class="container-wide mx-auto px-4 py-3 grid gap-2">
                 <a href="#profil" class="py-2">Profil</a>
@@ -335,55 +323,7 @@
         </form>
     </section>
 
-    <!-- Footer -->
-    <footer id="informasi" class="bg-slate-900 text-slate-200">
-        <div class="container-wide mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
-            <div class="col-span-1 flex items-start gap-4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/120px-Lambang_Kabupaten_Bondowoso.png"
-                    class="w-14 h-14" alt="Logo" />
-                <div>
-                    <div class="text-4xl font-extrabold tracking-tight text-sky-400">PPID</div>
-                    <p class="text-sm mt-1">Pejabat Pengelola Informasi dan Dokumentasi<br />Kabupaten Bondowoso</p>
-                    <div class="flex gap-4 mt-4">
-                        <a href="#" aria-label="Instagram" class="hover:text-white"></a>
-                        <a href="#" aria-label="Facebook" class="hover:text-white"></a>
-                        <a href="#" aria-label="WhatsApp" class="hover:text-white"></a>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h4 id="profil" class="font-semibold text-white mb-3">Profil</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Profil PPID</a></li>
-                    <li><a href="#" class="hover:text-white">Struktur Organisasi</a></li>
-                    <li><a href="#" class="hover:text-white">Regulasi</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-3">Layanan</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#layanan" class="hover:text-white">Layanan Pemerintahan</a></li>
-                    <li><a href="#layanan" class="hover:text-white">Layanan Publik</a></li>
-                    <li><a href="#layanan" class="hover:text-white">Layanan Pengaduan</a></li>
-                    <li><a href="#layanan" class="hover:text-white">Permohonan Informasi</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-semibold text-white mb-3">Informasi</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">Informasi 1</a></li>
-                    <li><a href="#" class="hover:text-white">Informasi 2</a></li>
-                    <li><a href="#" class="hover:text-white">Informasi 3</a></li>
-                    <li><a href="#" class="hover:text-white">Informasi 4</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-slate-800">
-            <div class="container-wide mx-auto px-4 py-4 text-xs text-slate-400">© <span id="year"></span> PPID
-                Kabupaten Bondowoso</div>
-        </div>
-    </footer>
+    <?php include('footer.php');?>
 
     <script src="/js/scripts.js"></script>
 </body>
