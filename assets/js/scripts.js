@@ -86,3 +86,38 @@ const moreContent = document.getElementById("moreContent");
 toggleBtn.addEventListener("click", () => {
     moreContent.classList.toggle("hidden");
 });
+
+// Live Search functionality
+const searchInput = document.getElementById('searchInput');
+const cardsContainer = document.getElementById('cardsContainer');
+const searchResults = document.getElementById('searchResults');
+const resultsCount = document.getElementById('resultsCount');
+const noResults = document.getElementById('noResults');
+const allCards = document.querySelectorAll('.information-card');
+
+searchInput.addEventListener("input", performSearch);
+
+// Function to perform search
+function performSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
+
+    allCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const content = card.getAttribute('data-content').toLowerCase();
+
+        // Check if search term matches title or content
+        const matches = title.includes(searchTerm) || content.includes(searchTerm);
+
+        if (searchTerm === '' || matches) {
+            card.style.display = 'block';
+            card.style.opacity = '1';
+            card.style.transform = 'scale(1)';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.95)';
+        }
+    });
+}
