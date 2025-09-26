@@ -3,17 +3,25 @@
 <!-- Footer -->
 <html>
 <footer id="informasi" class="bg-slate-900 text-slate-200">
-    <div class="container-wide mx-auto px-4 py-12 grid md:grid-cols-4 gap-10">
+    <div class="container-wide mx-auto px-4 py-12 grid md:grid-cols-4 gap-12">
         <div class="col-span-1 flex items-start gap-4">
-            <img src="assets/img/bondowoso.png"
-                class="w-14 h-14" alt="Logo" />
+            <img src="assets/img/bondowoso.png" class="w-14 h-14" alt="Logo" />
             <div>
                 <div class="text-4xl font-extrabold tracking-tight text-sky-400">PPID</div>
                 <p class="text-sm mt-1">Pejabat Pengelola Informasi dan Dokumentasi<br />Kabupaten Bondowoso</p>
                 <div class="flex gap-4 mt-4">
-                    <a href="#" aria-label="Instagram" class="hover:text-white"></a>
-                    <a href="#" aria-label="Facebook" class="hover:text-white"></a>
-                    <a href="#" aria-label="WhatsApp" class="hover:text-white"></a>
+                    <a href="#" aria-label="Instagram" class="hover:text-white">
+                        <img src="https://img.icons8.com/m_outlined/512/FFFFFF/instagram-new--v2.png" class="w-6 h-6" />
+                    </a>
+                    <a href="#" aria-label="Whatsapp" class="hover:text-white">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/whatsapp-white-icon.png" class="w-5 h-5" />
+                    </a>
+                    <a href="#" aria-label="Facebook" class="hover:text-white">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-app-round-white-icon.png" class="w-5 h-5" />
+                    </a>
+                    <a href="#" aria-label="Youtube" class="hover:text-white">
+                        <img src="https://freepnglogo.com/images/all_img/1701510949youtube-logo-png-white.png" class="w-7 h-5" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -29,10 +37,10 @@
         <div>
             <h4 class="font-semibold text-white mb-3">Layanan</h4>
             <ul class="space-y-2 text-sm">
-                <li><a href="#layanan" class="hover:text-white">Layanan Pemerintahan</a></li>
-                <li><a href="#layanan" class="hover:text-white">Layanan Publik</a></li>
-                <li><a href="#layanan" class="hover:text-white">Layanan Pengaduan</a></li>
-                <li><a href="#layanan" class="hover:text-white">Permohonan Informasi</a></li>
+                <li><a href="layanan.php" class="hover:text-white">Layanan Pemerintahan</a></li>
+                <li><a href="layanan.php" class="hover:text-white">Layanan Publik</a></li>
+                <li><a href="layanan.php" class="hover:text-white">Layanan Pengaduan</a></li>
+                <li><a href="layanan.php" class="hover:text-white">Permohonan Informasi</a></li>
             </ul>
         </div>
         <div>
@@ -50,4 +58,5 @@
             Kabupaten Bondowoso</div>
     </div>
 </footer>
+
 </html>
