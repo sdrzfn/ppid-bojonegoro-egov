@@ -8,6 +8,7 @@
         </a>
         <ul class="hidden md:flex items-center gap-10 font-medium">
             <li><a class="text-white hover:text-sky-600 hover:underline underline-offset-8" href="profil.php">Profil</a></li>
+            <li><a class="text-white hover:text-sky-600 hover:underline underline-offset-8" href="berita.php">Berita</a></li>
             <li><a class="text-white hover:text-sky-600 hover:underline underline-offset-8" href="layanan.php">Layanan</a></li>
             <li><a class="text-white hover:text-sky-600 hover:underline underline-offset-8" href="informasi.php">Informasi</a></li>
         </ul>
