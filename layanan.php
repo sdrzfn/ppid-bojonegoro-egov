@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Layanan PPID</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="assets/img/bondowoso.png">
+    <link rel="icon" href="assets/img/bondowoso.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -58,11 +58,11 @@
 <body class="bg-white text-slate-800">
 
     <!-- Navbar -->
-    <?php include('footer.php');?>
+    <?php include('navbar.php');?>
 
     <!-- Hero -->
     <header class="relative h-60 md:h-72 w-full bg-center bg-cover"
-        style="background-image:url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop');">
+        style="background-image:url('assets/img/cover-layanan.jpg');">
         <div class="absolute inset-0 bg-sky-900/40"></div>
         <div class="absolute inset-0 flex items-center">
             <div class="container-wide mx-auto px-4 fade-section">
@@ -75,33 +75,7 @@
     <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
 
         <!-- Search & Filter -->
-        <section class="container-wide mx-auto px-4 py-10 fade-section">
-            <div class="flex items-center gap-3">
-                <div class="flex-1">
-                    <div class="relative">
-                        <input type="text" placeholder="Cari informasi, dokumen, atau layanan..."
-                            class="w-full rounded-full border border-slate-300 px-12 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500" />
-                        <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                class="w-6 h-6">
-                                <path fill-rule="evenodd"
-                                    d="M10.5 3.75a6.75 6.75 0 1 0 4.243 12.023l4.242 4.242 1.06-1.06-4.241-4.243A6.75 6.75 0 0 0 10.5 3.75Zm-5.25 6.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <button
-                    class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-full border border-slate-300 hover:bg-slate-50"
-                    title="Filter">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M6.75 12h10.5M10.5 17.25h3" />
-                    </svg>
-                </button>
-            </div>
-        </section>
+        <?php include('searchbar.php');?>
 
         <!-- Dropdown pemilih form -->
         <section class="fade-section">
@@ -275,8 +249,7 @@
                             vitae rhoncus commodo sem hendrerit.</p>
                         <div class="flex items-center justify-between pt-2 text-xs">
                             <div class="flex items-center gap-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/40px-Lambang_Kabupaten_Bondowoso.png"
-                                    class="w-5 h-5" alt="PPID" />
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/40px-Lambang_Kabupaten_Bondowoso.png" class="w-5 h-5" alt="PPID" />
                                 <span class="font-medium">@PPID</span>
                             </div>
                             <a href="#" class="text-sky-600 hover:underline">Selengkapnya</a>
@@ -290,7 +263,7 @@
 
     <?php include('footer.php');?>
 
-    <script src="/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
