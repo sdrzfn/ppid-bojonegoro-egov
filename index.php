@@ -7,6 +7,7 @@
     <title>PPID Kabupaten Bondowoso</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="assets/img/bondowoso.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
@@ -67,17 +68,16 @@
         </button>
         <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white">
             <div class="container-wide mx-auto px-4 py-3 grid gap-2">
-                <a href="#profil" class="py-2">Profil</a>
-                <a href="#layanan" class="py-2">Layanan</a>
-                <a href="#informasi" class="py-2">Informasi</a>
+                <a href="profil.php" class="py-2">Profil</a>
+                <a href="layanan.php" class="py-2">Layanan</a>
+                <a href="informasi.php" class="py-2">Informasi</a>
             </div>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="relative">
-        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop"
-            alt="Hero" class="w-full h-[280px] md:h-[360px] object-cover" />
+        <img src="assets/img/cover-index.jpg" alt="Hero" class="w-full h-[280px] md:h-[360px] object-cover" />
         <div class="absolute inset-0 bg-sky-900/40"></div>
         <div class="absolute inset-0 flex items-center">
             <div class="container-wide mx-auto px-4 fade-section">
@@ -88,87 +88,228 @@
     </section>
 
     <!-- Search & Filter -->
-    <section class="container-wide mx-auto px-4 py-10 fade-section">
-        <div class="flex items-center gap-3">
-            <div class="flex-1">
-                <div class="relative">
-                    <input type="text" placeholder="Cari informasi, dokumen, atau layanan..."
-                        class="w-full rounded-full border border-slate-300 px-12 py-3 focus:outline-none focus:ring-2 focus:ring-sky-500" />
-                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                            <path fill-rule="evenodd"
-                                d="M10.5 3.75a6.75 6.75 0 1 0 4.243 12.023l4.242 4.242 1.06-1.06-4.241-4.243A6.75 6.75 0 0 0 10.5 3.75Zm-5.25 6.75a5.25 5.25 0 1 1 10.5 0 5.25 5.25 0 0 1-10.5 0Z"
-                                clip-rule="evenodd" />
-                        </svg>
+    <?php include('searchbar.php'); ?>
+
+    <!-- Information Cards -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cardsContainer">
+                <!-- Card 1 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Layanan Perizinan Usaha"
+                    data-content="Informasi lengkap mengenai perizinan usaha dan investasi di Kabupaten Bondowoso. Termasuk prosedur, persyaratan, dan biaya yang diperlukan untuk mendapatkan izin usaha.">
+                    <div class="h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-blue-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            <span class="text-blue-600 font-medium">Perizinan</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Layanan Perizinan Usaha</h3>
+                        <p class="text-gray-600 text-sm mb-4">Informasi lengkap mengenai perizinan usaha dan investasi
+                            di Kabupaten Bondowoso. Termasuk prosedur, persyaratan, dan biaya yang diperlukan untuk
+                            mendapatkan izin usaha.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Dokumen Anggaran Daerah"
+                    data-content="Akses dokumen APBD, laporan keuangan daerah, dan informasi transparansi anggaran Kabupaten Bondowoso. Termasuk realisasi anggaran dan laporan pertanggungjawaban.">
+                    <div class="h-48 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-green-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                            <span class="text-green-600 font-medium">Anggaran</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dokumen Anggaran Daerah</h3>
+                        <p class="text-gray-600 text-sm mb-4">Akses dokumen APBD, laporan keuangan daerah, dan informasi
+                            transparansi anggaran Kabupaten Bondowoso. Termasuk realisasi anggaran dan laporan
+                            pertanggungjawaban.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Program Pembangunan Daerah"
+                    data-content="Informasi program pembangunan infrastruktur, pendidikan, kesehatan, dan sosial di Kabupaten Bondowoso. Termasuk status progress dan rencana pembangunan ke depan.">
+                    <div class="h-48 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-purple-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4">
+                                </path>
+                            </svg>
+                            <span class="text-purple-600 font-medium">Pembangunan</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Program Pembangunan Daerah</h3>
+                        <p class="text-gray-600 text-sm mb-4">Informasi program pembangunan infrastruktur, pendidikan,
+                            kesehatan, dan sosial di Kabupaten Bondowoso. Termasuk status progress dan rencana
+                            pembangunan ke depan.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Layanan Publik Online"
+                    data-content="Akses berbagai layanan publik secara online seperti e-KTP, akta kelahiran, surat keterangan domisili, dan layanan administrasi lainnya yang dapat diakses 24 jam.">
+                    <div class="h-48 bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-orange-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span class="text-orange-600 font-medium">Online</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Layanan Publik Online</h3>
+                        <p class="text-gray-600 text-sm mb-4">Akses berbagai layanan publik secara online seperti e-KTP,
+                            akta kelahiran, surat keterangan domisili, dan layanan administrasi lainnya yang dapat
+                            diakses 24 jam.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Data Statistik Daerah"
+                    data-content="Kumpulan data statistik demografis, ekonomi, sosial, dan pembangunan Kabupaten Bondowoso. Data tersedia dalam format yang mudah diakses dan dianalisis.">
+                    <div class="h-48 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-red-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                            <span class="text-red-600 font-medium">Statistik</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Data Statistik Daerah</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kumpulan data statistik demografis, ekonomi, sosial, dan
+                            pembangunan Kabupaten Bondowoso. Data tersedia dalam format yang mudah diakses dan
+                            dianalisis.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="information-card bg-white rounded-lg card-shadow overflow-hidden"
+                    data-title="Regulasi dan Peraturan"
+                    data-content="Kumpulan peraturan daerah, keputusan bupati, dan regulasi lainnya yang berlaku di Kabupaten Bondowoso. Semua dokumen tersedia untuk diunduh dan dipelajari.">
+                    <div class="h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                        <div class="text-center">
+                            <svg class="w-16 h-16 mx-auto text-teal-500 mb-2" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2v0a2 2 0 012-2h10a2 2 0 012 2v2">
+                                </path>
+                            </svg>
+                            <span class="text-teal-600 font-medium">Regulasi</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Regulasi dan Peraturan</h3>
+                        <p class="text-gray-600 text-sm mb-4">Kumpulan peraturan daerah, keputusan bupati, dan regulasi
+                            lainnya yang berlaku di Kabupaten Bondowoso. Semua dokumen tersedia untuk diunduh dan
+                            dipelajari.</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">Selengkapnya</a>
+                        <div class="flex items-center justify-between mt-6 pt-4 border-t">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 logo-gradient rounded-full flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-blue-500 font-semibold text-sm">PPID</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-xs text-gray-500">Contact</div>
+                                <div class="text-xs text-gray-600">0859-xxxx-xxxx</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button
-                class="shrink-0 inline-flex items-center justify-center w-12 h-12 rounded-full border border-slate-300 hover:bg-slate-50"
-                title="Filter">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M6.75 12h10.5M10.5 17.25h3" />
-                </svg>
-            </button>
-        </div>
-    </section>
-
-    <!-- Cards -->
-    <section class="container-wide mx-auto px-4 pb-12 fade-section">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Card template repeated 3 times -->
-            <article class="rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
-                <div class="aspect-[4/3] bg-slate-200 grid place-content-center text-slate-500">Picture</div>
-                <div class="p-5 space-y-3">
-                    <h3 class="font-semibold text-lg">Lorem Ipsum Sit Dolor Amet</h3>
-                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-                        vitae rhoncus commodo sem hendrerit.</p>
-                    <div class="flex items-center justify-between pt-2 text-xs">
-                        <div class="flex items-center gap-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/40px-Lambang_Kabupaten_Bondowoso.png"
-                                class="w-5 h-5" alt="PPID" />
-                            <span class="font-medium">@PPID</span>
-                        </div>
-                        <a href="#" class="text-sky-600 hover:underline">Selengkapnya</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
-                <div class="aspect-[4/3] bg-slate-200 grid place-content-center text-slate-500">Picture</div>
-                <div class="p-5 space-y-3">
-                    <h3 class="font-semibold text-lg">Lorem Ipsum Sit Dolor Amet</h3>
-                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-                        vitae rhoncus commodo sem hendrerit.</p>
-                    <div class="flex items-center justify-between pt-2 text-xs">
-                        <div class="flex items-center gap-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/40px-Lambang_Kabupaten_Bondowoso.png"
-                                class="w-5 h-5" alt="PPID" />
-                            <span class="font-medium">@PPID</span>
-                        </div>
-                        <a href="#" class="text-sky-600 hover:underline">Selengkapnya</a>
-                    </div>
-                </div>
-            </article>
-
-            <article class="rounded-xl border border-slate-200 overflow-hidden bg-white hover:shadow-md transition">
-                <div class="aspect-[4/3] bg-slate-200 grid place-content-center text-slate-500">Picture</div>
-                <div class="p-5 space-y-3">
-                    <h3 class="font-semibold text-lg">Lorem Ipsum Sit Dolor Amet</h3>
-                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam
-                        vitae rhoncus commodo sem hendrerit.</p>
-                    <div class="flex items-center justify-between pt-2 text-xs">
-                        <div class="flex items-center gap-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Lambang_Kabupaten_Bondowoso.png/40px-Lambang_Kabupaten_Bondowoso.png"
-                                class="w-5 h-5" alt="PPID" />
-                            <span class="font-medium">@PPID</span>
-                        </div>
-                        <a href="#" class="text-sky-600 hover:underline">Selengkapnya</a>
-                    </div>
-                </div>
-            </article>
         </div>
     </section>
 
@@ -195,106 +336,117 @@
             </div>
         </div>
 
-        <h2 class="text-2xl font-semibold mb-6">Form Permohonan Informasi</h2>
-        <form id="formPermohonan" class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nama<span class="text-red-500">*</span></label>
-                    <input type="text"
-                        class="w-full rounded-md border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                        required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">No KTP<span class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Ormas/Perorangan<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">No Telp / Email<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Alamat<span class="text-red-500">*</span></label>
-                    <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Rincian Informasi yang Dibutuhkan<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="5" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Tujuan Mendapatkan Informasi<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-                <fieldset>
-                    <legend class="block text-sm font-medium mb-2">Cara Mendapatkan Salinan Informasi<span
-                            class="text-red-500">*</span></legend>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan" required>
-                            Mengambil Langsung</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan"> Kurir</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan"> Email</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan">
-                            WhatsApp</label>
+        <div>
+            <h2 class="text-2xl font-semibold mb-6">Form Permohonan Informasi</h2>
+            <form id="formPermohonan" class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nama<span class="text-red-500">*</span></label>
+                        <input type="text"
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"
+                            required />
                     </div>
-                </fieldset>
-                <div class="pt-2">
-                    <button type="submit"
-                        class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Submit</button>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">No KTP<span class="text-red-500">*</span></label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Ormas/Perorangan<span
+                                class="text-red-500">*</span></label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">No Telp / Email<span
+                                class="text-red-500">*</span></label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Alamat<span class="text-red-500">*</span></label>
+                        <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2"
+                            required></textarea>
+                    </div>
                 </div>
-            </div>
-        </form>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Rincian Informasi yang Dibutuhkan<span
+                                class="text-red-500">*</span></label>
+                        <textarea rows="5" class="w-full rounded-md border border-slate-300 px-3 py-2"
+                            required></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Tujuan Mendapatkan Informasi<span
+                                class="text-red-500">*</span></label>
+                        <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2"
+                            required></textarea>
+                    </div>
+                    <fieldset>
+                        <legend class="block text-sm font-medium mb-2">Cara Mendapatkan Salinan Informasi<span
+                                class="text-red-500">*</span></legend>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                            <label class="inline-flex items-center gap-2"><input type="radio" name="salinan" required>
+                                Mengambil Langsung</label>
+                            <label class="inline-flex items-center gap-2"><input type="radio" name="salinan">
+                                Kurir</label>
+                            <label class="inline-flex items-center gap-2"><input type="radio" name="salinan">
+                                Email</label>
+                            <label class="inline-flex items-center gap-2"><input type="radio" name="salinan">
+                                WhatsApp</label>
+                        </div>
+                    </fieldset>
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
         <!-- Dummy form: Pengajuan Keberatan (hidden by default) -->
-        <form id="formKeberatan" class="hidden mt-8 grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nama Pemohon<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+        <div>
+            <h2 class="text-2xl font-semibold mb-6">Form Pengajuan Keberatan</h2>
+            <form id="formKeberatan" class="hidden mt-8 grid md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nama Pemohon<span
+                                class="text-red-500">*</span></label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Nomor Registrasi Permohonan<span
+                                class="text-red-500">*</span></label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Alasan Keberatan<span
+                                class="text-red-500">*</span></label>
+                        <textarea rows="6" class="w-full rounded-md border border-slate-300 px-3 py-2"
+                            required></textarea>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nomor Registrasi Permohonan<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Kontak</label>
+                        <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-1">Lampiran (opsional)</label>
+                        <input type="file"
+                            class="w-full rounded-md border border-slate-300 px-3 py-2 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100" />
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Kirim
+                            Keberatan</button>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Alasan Keberatan<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="6" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Kontak</label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Lampiran (opsional)</label>
-                    <input type="file"
-                        class="w-full rounded-md border border-slate-300 px-3 py-2 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100" />
-                </div>
-                <div class="pt-2">
-                    <button type="submit"
-                        class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Kirim
-                        Keberatan</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </section>
 
-    <?php include('footer.php');?>
+    <?php include('footer.php'); ?>
 
-    <script src="/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
