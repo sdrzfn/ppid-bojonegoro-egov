@@ -40,7 +40,7 @@ if ($_SESSION['role'] == 'super_admin') {
 }
 ?>
 
-<h2 class="text-2xl font-bold mb-6 ml-6 mt-6">DOKUMEN</h2>
+<h2 class="text-2xl font-bold mb-6 ml-6 mt-6">Dokumen</h2>
 
 <form method="POST" enctype="multipart/form-data" class="bg-white shadow-md rounded-lg p-6 mb-8 space-y-4">
     <div>
