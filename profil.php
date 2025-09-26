@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil PPID</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/img/bondowoso.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
@@ -129,7 +130,7 @@
 
     <!-- Hero -->
     <section class="relative">
-        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=1600&auto=format&fit=crop"
+        <img src="assets/img/cover-profil.jpg"
             alt="Hero" class="w-full h-[280px] md:h-[360px] object-cover" />
         <div class="absolute inset-0 bg-sky-900/40"></div>
         <div class="absolute inset-0 flex items-center">
@@ -216,116 +217,15 @@
                             clip-rule="evenodd" />
                     </svg>
                 </button>
-                <div id="formMenu"
-                    class="hidden absolute z-10 mt-2 w-64 rounded-lg border border-slate-200 bg-white shadow-lg">
-                    <button data-form="permohonan" class="w-full text-left px-4 py-2 hover:bg-slate-50">Form Permohonan
-                        Informasi</button>
-                    <button data-form="keberatan" class="w-full text-left px-4 py-2 hover:bg-slate-50">Form Pengajuan
-                        Keberatan</button>
+                <div id="formMenu">
                 </div>
             </div>
         </div>
-
-        <h2 class="text-2xl font-semibold mb-6">Form Permohonan Informasi</h2>
-        <form id="formPermohonan" class="grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nama<span class="text-red-500">*</span></label>
-                    <input type="text"
-                        class="w-full rounded-md border border-slate-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500"
-                        required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">No KTP<span class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Ormas/Perorangan<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">No Telp / Email<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Alamat<span class="text-red-500">*</span></label>
-                    <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Rincian Informasi yang Dibutuhkan<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="5" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Tujuan Mendapatkan Informasi<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="3" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-                <fieldset>
-                    <legend class="block text-sm font-medium mb-2">Cara Mendapatkan Salinan Informasi<span
-                            class="text-red-500">*</span></legend>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan" required>
-                            Mengambil Langsung</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan"> Kurir</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan"> Email</label>
-                        <label class="inline-flex items-center gap-2"><input type="radio" name="salinan">
-                            WhatsApp</label>
-                    </div>
-                </fieldset>
-                <div class="pt-2">
-                    <button type="submit"
-                        class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Submit</button>
-                </div>
-            </div>
-        </form>
-
-        <!-- Dummy form: Pengajuan Keberatan (hidden by default) -->
-        <form id="formKeberatan" class="hidden mt-8 grid md:grid-cols-2 gap-6">
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nama Pemohon<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Nomor Registrasi Permohonan<span
-                            class="text-red-500">*</span></label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" required />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Alasan Keberatan<span
-                            class="text-red-500">*</span></label>
-                    <textarea rows="6" class="w-full rounded-md border border-slate-300 px-3 py-2" required></textarea>
-                </div>
-            </div>
-            <div class="space-y-4">
-                <div>
-                    <label class="block text-sm font-medium mb-1">Kontak</label>
-                    <input type="text" class="w-full rounded-md border border-slate-300 px-3 py-2" />
-                </div>
-                <div>
-                    <label class="block text-sm font-medium mb-1">Lampiran (opsional)</label>
-                    <input type="file"
-                        class="w-full rounded-md border border-slate-300 px-3 py-2 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100" />
-                </div>
-                <div class="pt-2">
-                    <button type="submit"
-                        class="ml-auto block w-40 rounded-md bg-sky-600 text-white px-5 py-2 font-semibold hover:bg-sky-700">Kirim
-                        Keberatan</button>
-                </div>
-            </div>
-        </form>
     </section>
 
     <?php include('footer.php');?>
 
-    <script src="/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
